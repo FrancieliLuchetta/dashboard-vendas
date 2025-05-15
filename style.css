@@ -1,0 +1,105 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background-color: #f0f9ff;
+  }
+  
+  header {
+    background-color: #3b82f6;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .cards {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    width: 250px;
+    text-align: center;
+  }
+  
+  .grafico {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  }
+
+  canvas#lucroChart {
+    max-width: 350px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .tabela-pedidos {
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    margin: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
+  
+  .tabela-pedidos h2 {
+    color: #1e3a8a;
+    margin-bottom: 15px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  thead th {
+    background-color: #e0e7ff;
+    padding: 10px;
+    text-align: left;
+    color: #1e3a8a;
+  }
+  
+  tbody td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    color: #1e3a8a;
+  }
+  
+  .status {
+    padding: 5px 10px;
+    border-radius: 12px;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .status.pago {
+    background-color: #22c55e; /* verde */
+  }
+  
+  .status.pendente {
+    background-color: #facc15; /* amarelo */
+    color: #1f2937;
+  }
+  
+  .status.cancelado {
+    background-color: #ef4444; /* vermelho */
+  }
+  
+  #buscaCliente {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  

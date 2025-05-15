@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard de Vendas - Francieli</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>SmartSales - Dashboard</h1>
+  </header>
+
+  <main>
+    <section class="cards">
+      <div class="card">
+        <h3>Faturamento</h3>
+        <p>R$ 18.500,00</p>
+      </div>
+      <div class="card">
+        <h3>Lucro</h3>
+        <p>R$ 7.300,00</p>
+      </div>
+      <div class="card">
+        <h3>Pedidos</h3>
+        <p>285</p>
+      </div>
+    </section>
+
+    <!-- FILTRO DE ANO -->
+    <section class="filtro">
+      <label for="ano">Filtrar por ano:</label>
+      <select id="ano" onchange="filtrarDados(this.value)">
+        <option value="2024">2024</option>
+        <option value="2025">2025</option>
+      </select>
+    </section>
+
+    <!-- GRÁFICOS -->
+    <section class="grafico">
+      <canvas id="vendasChart"></canvas>
+    </section>
+    <section class="grafico">
+      <canvas id="lucroChart"></canvas>
+    </section>
+    <section class="grafico">
+      <canvas id="metasChart" width="600" height="300"></canvas>
+    </section>
+
+    <section class="tabela-pedidos">
+        <h2>📦 Pedidos Recentes</h2>
+
+    <!-- Campo de busca -->
+    <input type="text" id="buscaCliente" placeholder="Buscar cliente..." oninput="renderizarTabela(this.value)" />
+        
+        <table>
+          <thead>
+            <tr>
+              <th>Cliente</th>
+              <th>Valor</th>
+              <th>Data</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="tabela-pedidos-body">
+            <!-- Linhas geradas por JavaScript -->
+          </tbody>          
+        </table>
+      </section>      
+  </main>
+
+  <script src="chart.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
